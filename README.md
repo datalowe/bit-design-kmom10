@@ -1,27 +1,37 @@
-# DesignKmom10Webdev
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+# Design kmom10: Bew Gorp, web developer self promotion
 
-## Development server
+This repository is my final project for the course Technical Web Design and Usability ("Teknisk webbdesign och användbarhet - PA1436") at Blekinge Institute of Technology (BIT). I attended the course in the winter of 2020-2021 but did not finish the final project then, so this is a long overdue completion of my bachelor's degree from BIT.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project consists of a technically simple site which promotes the fictional web designer "Bew Gorp". The emphasis in the course and this project is on web design and accessibility.
 
-## Code scaffolding
+## Used tools
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- Sass (with the SCSS format)
+- ? (TODO: select image compression tool)
+- nginx (for serving)
+- Docker (for automating deployment)
 
-## Build
+## Deploy with docker
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Create a file in root .docker.env with contents:
 
-## Running unit tests
+```
+APP_BASE_HREF=/root/path/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+where in this example, you would deploy to `https://mysite.com/root/path` (use just `/` if deploying at root).
 
-## Running end-to-end tests
+```bash
+docker compose up -d
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+This starts a container which exposes the website at `https://localhost:7005`.
 
-## Further help
+(to bring the container down, run `docker compose down`)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Used resources
+
+- favicon cap: https://www.flaticon.com/free-icons/cap

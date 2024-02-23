@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+.docker.env
+nonrepo_materials_notes
+
 # Compiled output
 /dist
 /tmp

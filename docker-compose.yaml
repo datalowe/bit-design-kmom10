@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - '7005:80'
+    container_name: kmom10
+    restart: always
