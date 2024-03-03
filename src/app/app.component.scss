@@ -1,0 +1,20 @@
+@use 'sass:color';
+@import 'variables';
+
+$footer-top-color: color.scale($lightest-color, $lightness: 70%);
+$footer-bottom-color: $lightest-color;
+
+.flex-arrangement-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.outlet-wrapper {
+  background: linear-gradient($bg-color, $footer-top-color);
+  flex: auto;
+}
+
+.footer-wrapper {
+  background: linear-gradient($footer-top-color, $footer-bottom-color);
+}

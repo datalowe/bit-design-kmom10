@@ -1,5 +1,9 @@
-@use 'sass:color';
 @import 'variables';
+
+@font-face {
+  font-family: special-elite;
+  src: url('assets/fonts/SpecialElite.ttf') format('opentype');
+}
 
 * {
   font-family: $normal-font-family;

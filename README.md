@@ -39,3 +39,5 @@ This starts a container which exposes the website at `https://localhost:7005`.
 - Photos used
   - https://pixabay.com/de/photos/frau-arbeit-b%C3%BCro-whiteboard-4702060/
   - https://pixabay.com/de/photos/frau-computers-b%C3%BCro-arbeiten-5653501/
+- Fonts
+  - "Special Elite Typewriter": https://www.1001fonts.com/special-elite-font.html
