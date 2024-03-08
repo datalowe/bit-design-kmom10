@@ -28,3 +28,20 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+p {
+  max-width: 80em;
+  line-height: 1.4em;
+
+  @media (min-width: $mediumscreen-min-width) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: $widescreen-min-width) {
+    font-size: 1.5em;
+  }
+}
+
+.in-text-link {
+  color: $mid-color;
+}

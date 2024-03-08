@@ -41,3 +41,9 @@ This starts a container which exposes the website at `https://localhost:7005`.
   - https://pixabay.com/de/photos/frau-computers-b%C3%BCro-arbeiten-5653501/
 - Fonts
   - "Special Elite Typewriter": https://www.1001fonts.com/special-elite-font.html
+- Logos
+  - Docker: https://logos-world.net/wp-content/uploads/2021/02/Docker-Emblem.png
+  - Angular: https://freebiesupply.com/logos/angular-logo/
+  - WebAssembly: https://seeklogo.com/vector-logo/411853/webassembly
+  - Rust: https://commons.wikimedia.org/wiki/File:Rust_programming_language_black_logo.svg
+  - Django: https://creazilla.com/nodes/3253694-django-icon
