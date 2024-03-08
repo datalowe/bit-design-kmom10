@@ -1,0 +1,14 @@
+<footer>
+  <div class="social-wrapper">
+    <a
+      *ngFor="let social of this.socialLinks"
+      [href]="social.url"
+      target="_blank"
+      [title]="social.title"
+      class="icon-link"
+    >
+      <img [src]="social.iconUrl" />
+    </a>
+  </div>
+  <small class="copyright"> © 2024 Bew Gorp </small>
+</footer>

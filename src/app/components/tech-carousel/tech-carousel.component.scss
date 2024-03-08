@@ -1,0 +1,14 @@
+@import 'variables';
+
+.tech-carousel-img {
+  height: 15vh;
+  @media (min-width: $mediumscreen-min-width) {
+    height: 20vh;
+  }
+}
+
+.tech-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

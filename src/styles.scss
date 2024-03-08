@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+@font-face {
+  font-family: special-elite;
+  src: url('assets/fonts/SpecialElite.ttf') format('opentype');
+}
+
+* {
+  font-family: $normal-font-family;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $bg-color;
+}
+body,
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  max-width: 80em;
+  line-height: 1.4em;
+
+  @media (min-width: $mediumscreen-min-width) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: $widescreen-min-width) {
+    font-size: 1.5em;
+  }
+}
+
+.in-text-link {
+  color: $mid-color;
+}

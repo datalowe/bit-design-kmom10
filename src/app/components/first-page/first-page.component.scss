@@ -1,0 +1,46 @@
+@import 'variables';
+
+:host {
+  grid-area: maincontent;
+}
+
+.welcome {
+  grid-area: welcome-text;
+  width: 100%;
+}
+
+.intro-text {
+  grid-area: intro-text;
+}
+
+.tech-carousel {
+  grid-area: tech-carousel;
+}
+
+.logo {
+  grid-area: logo;
+  display: none;
+  @media (min-width: $mediumscreen-min-width) {
+    display: block;
+    height: 200px;
+  }
+}
+
+.contact-text {
+  grid-area: contact-text;
+}
+
+.first-page-wrapper {
+  padding: 1rem 2rem;
+  @media (min-width: $mediumscreen-min-width) {
+    padding: 2rem 2rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'welcome-text welcome-text welcome-text'
+      'intro-text intro-text logo'
+      'tech-carousel contact-text contact-text';
+  }
+}

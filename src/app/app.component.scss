@@ -1,0 +1,27 @@
+@use 'sass:color';
+@import 'variables';
+
+.flex-arrangement-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.outlet-wrapper {
+  background-color: $bg-color;
+  flex: auto;
+  position: relative;
+  // enforce that the main content really does take up _all_ of
+  // the outlet area
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'maincontent';
+  :nth-child(2) {
+    grid-area: maincontent;
+  }
+}
+
+.footer-wrapper {
+  background-color: $lightest-color;
+}
