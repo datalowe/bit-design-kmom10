@@ -37,8 +37,9 @@ This starts a container which exposes the website at `https://localhost:7005`.
 - favicon cap: https://www.flaticon.com/free-icons/cap
 - Monochromatic orange color palette generated with Adobe color wheel: https://color.adobe.com/ja/create/color-wheel
 - Photos used
-  - https://pixabay.com/de/photos/frau-arbeit-b%C3%BCro-whiteboard-4702060/
-  - https://pixabay.com/de/photos/frau-computers-b%C3%BCro-arbeiten-5653501/
+  - Programmer by whiteboard: https://pixabay.com/de/photos/frau-arbeit-b%C3%BCro-whiteboard-4702060/
+  - Programmer at computer: https://pixabay.com/de/photos/frau-computers-b%C3%BCro-arbeiten-5653501/
+  - Code on screen: https://www.pexels.com/photo/html-270366/
 - Fonts
   - "Special Elite Typewriter": https://www.1001fonts.com/special-elite-font.html
 - Logos

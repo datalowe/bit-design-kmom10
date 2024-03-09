@@ -1,0 +1,38 @@
+@import 'variables';
+
+:host {
+  grid-area: maincontent;
+}
+
+.about-wrapper {
+  position: relative;
+  overflow: clip;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  @media (min-width: $mediumscreen-min-width) {
+    padding: 2rem 2rem;
+  }
+}
+
+.text-wrapper {
+  @media (min-width: $mediumscreen-min-width) {
+    max-width: 70%;
+  }
+}
+
+.portrait-wrapper {
+  overflow: hidden;
+}
+
+.portrait {
+  position: absolute;
+  width: 100%;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  top: 0;
+  left: 0;
+  display: none;
+  @media (min-width: $mediumscreen-min-width) {
+    display: block;
+  }
+}
