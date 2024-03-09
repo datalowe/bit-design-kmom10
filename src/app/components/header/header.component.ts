@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +8,21 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private router: Router) {}
+
+  onFirstPage() {
+    return this.router.url.replace('/', '') === '';
+  }
+
+  getHeroImgUrl() {
+    const narrowScreen = window.innerWidth < 600;
+    if (this.onFirstPage()) {
+      if (narrowScreen) {
+        return '/assets/hero_narrowscreen.jpg';
+      }
+      return '/assets/hero_widescreen.jpg';
+    }
+    return '/assets/code.jpg';
+  }
+}

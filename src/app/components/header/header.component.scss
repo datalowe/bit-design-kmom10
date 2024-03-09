@@ -5,43 +5,77 @@ $nav-font-size: 16pt;
 $nav-text-active-color: color.scale($lightest-color, $lightness: 10%);
 $nav-text-dark-color: $darkest-color;
 $nav-text-light-color: #fefefe;
+$header-height-narrowscreen: 280px;
+$header-minheight-mediumscreen: 250px;
+$header-height-mediumscreen: 25vw;
+$header-height-widescreen: 20vw;
 $logo-diameter-small: 80px;
 $logo-diameter-medium: 100px;
 $logo-diameter-large: 150px;
 $nav-text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+$nav-text-shadow-light: 0 0 8px rgba(255, 255, 255, 1);
 
 .hero {
+  border-bottom: 2px solid $lightest-color;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
   margin: 0;
   background-color: $bg-color;
-  background-image: url('/assets/hero_narrowscreen.jpg');
   background-size: 100%;
-  height: 280px;
+  height: $header-height-narrowscreen;
   background-repeat: no-repeat;
   @media (min-width: $mediumscreen-min-width) {
-    min-height: 250px;
-    height: 25vw;
-    background-image: url('/assets/hero_widescreen.jpg');
+    min-height: $header-minheight-mediumscreen;
+    height: $header-height-mediumscreen;
   }
   @media (min-width: $widescreen-min-width) {
-    height: 20vw;
-    background-image: url('/assets/hero_widescreen.jpg');
+    height: $header-height-widescreen;
+  }
+
+  .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.hero.first-page {
+  .hero-img {
+    filter: none;
+  }
+  nav {
+    ul {
+      li {
+        @media (min-width: $mediumscreen-min-width) {
+          font-size: 1.5rem;
+          color: $nav-text-dark-color;
+          text-shadow: none;
+          :hover {
+            color: $nav-text-active-color;
+            text-shadow: $nav-text-shadow;
+          }
+        }
+      }
+    }
   }
 }
 
 .logo {
   position: absolute;
-  top: 10px;
-  left: 10px;
   z-index: 2;
-  width: $logo-diameter-small;
-  height: $logo-diameter-small;
   margin: 0;
   background-image: url('/assets/logo.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  top: 10px;
+  left: 10px;
+  width: $logo-diameter-small;
+  height: $logo-diameter-small;
   @media (min-width: $mediumscreen-min-width) {
     width: $logo-diameter-medium;
     height: $logo-diameter-medium;
@@ -54,6 +88,7 @@ $nav-text-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
 
 nav {
+  z-index: 1;
   ul {
     margin: 0 0 1rem 2rem;
     display: flex;
@@ -65,14 +100,11 @@ nav {
       cursor: pointer;
       text-transform: uppercase;
       text-shadow: $nav-text-shadow;
+      :hover {
+        text-shadow: $nav-text-shadow-light;
+      }
       @media (min-width: $mediumscreen-min-width) {
         font-size: 1.5rem;
-        color: $nav-text-dark-color;
-        text-shadow: none;
-        :hover {
-          color: $nav-text-active-color;
-          text-shadow: $nav-text-shadow;
-        }
       }
       @media (min-width: $widescreen-min-width) {
         font-size: 2rem;
