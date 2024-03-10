@@ -8,10 +8,9 @@ describe('TechCarouselComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TechCarouselComponent]
-    })
-    .compileComponents();
-    
+      imports: [TechCarouselComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(TechCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

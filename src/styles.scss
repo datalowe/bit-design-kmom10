@@ -42,6 +42,8 @@ p {
   }
 }
 
-.in-text-link {
-  color: $mid-color;
+p {
+  a {
+    color: $mid-color;
+  }
 }

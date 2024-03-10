@@ -9,15 +9,17 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  private narrowWidth = 600;
   constructor(private router: Router) {}
 
-  onFirstPage() {
-    return this.router.url.replace('/', '') === '';
+  onPortraitHeaderPage() {
+    const routeSansSlash = this.router.url.replace('/', '');
+    return routeSansSlash === '' || (routeSansSlash === 'about' && window.innerWidth < this.narrowWidth);
   }
 
   getHeroImgUrl() {
-    const narrowScreen = window.innerWidth < 600;
-    if (this.onFirstPage()) {
+    const narrowScreen = window.innerWidth < this.narrowWidth;
+    if (this.onPortraitHeaderPage()) {
       if (narrowScreen) {
         return '/assets/hero_narrowscreen.jpg';
       }
