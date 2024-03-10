@@ -1,5 +1,5 @@
 <div class="hero" [class.portrait-header-page]="this.onPortraitHeaderPage()">
-  <img class="hero-img" [src]="this.getHeroImgUrl()" />
+  <img class="hero-img" (window:resize)="setHeroImg()" [src]="this.heroImg.url" [alt]="this.heroImg.altText" />
   <nav>
     <ul>
       <li><a routerLink="">Home</a></li>

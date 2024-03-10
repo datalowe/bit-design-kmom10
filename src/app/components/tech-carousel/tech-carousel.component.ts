@@ -21,9 +21,11 @@ export class TechCarouselComponent implements OnInit {
     'rust.png',
     'webassembly.png',
   ];
+  private techNames = ['Angular', 'Ansible', 'Django', 'Docker', 'Python', 'Rust', 'WebAssembly'];
   private techImgCounter = 0;
   techImgOpacity = 0;
   techImgUrl = '/assets/tech-logos/angular.png';
+  techImgAltText = 'Angular';
 
   ngOnInit(): void {
     this.updateTechImgUrl();
@@ -32,6 +34,7 @@ export class TechCarouselComponent implements OnInit {
   updateTechImgUrl = () => {
     const fname = this.techImgFnames[this.techImgCounter];
     this.techImgUrl = `/assets/tech-logos/${fname}`;
+    this.techImgAltText = `${this.techNames[this.techImgCounter]} logo`;
     setTimeout(this.fadeInTechImg, this.WAIT_NEXTIMG_MS);
     this.techImgCounter = (this.techImgCounter + 1) % this.techImgFnames.length;
   };
