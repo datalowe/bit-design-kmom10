@@ -2,6 +2,7 @@
 
 .tech-carousel-img {
   height: 15vh;
+  width: auto;
   @media (min-width: $mediumscreen-min-width) {
     height: 20vh;
   }

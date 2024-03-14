@@ -45,14 +45,10 @@ $nav-text-shadow-light: 0 0 8px rgba(255, 255, 255, 1);
 }
 
 .hero.portrait-header-page {
-  .hero-img {
-    filter: none;
-  }
   nav {
     ul {
       li {
         @media (min-width: $mediumscreen-min-width) {
-          font-size: 1.5rem;
           color: $nav-text-dark-color;
           text-shadow: none;
           :hover {
@@ -69,9 +65,6 @@ $nav-text-shadow-light: 0 0 8px rgba(255, 255, 255, 1);
   position: absolute;
   z-index: 2;
   margin: 0;
-  background-image: url('/assets/logo.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
   top: 10px;
   left: 10px;
   width: $logo-diameter-small;

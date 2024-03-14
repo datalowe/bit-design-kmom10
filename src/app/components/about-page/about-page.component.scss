@@ -28,6 +28,7 @@
 .portrait {
   position: absolute;
   width: 100%;
+  height: auto;
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   top: 0;
   left: 0;

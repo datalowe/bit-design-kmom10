@@ -3,6 +3,9 @@
     class="tech-carousel-img"
     [src]="this.techImgUrl"
     [style.opacity]="this.techImgOpacity"
-    [alt]="this.techImgAltText"
+    [width]="this.techLogo.width"
+    [height]="this.techLogo.height"
+    alt="{{ this.techLogo.name | titlecase }} logo"
+    sizes="20vh"
   />
 </div>

@@ -34,7 +34,7 @@ This starts a container which exposes the website at `https://localhost:7005`.
 
 ## Used resources
 
-- favicon cap: https://www.flaticon.com/free-icons/cap
+- flaticon cap: https://www.flaticon.com/free-icons/cap
 - Monochromatic orange color palette generated with Adobe color wheel: https://color.adobe.com/ja/create/color-wheel
 - Photos used
   - Programmer by whiteboard: https://pixabay.com/de/photos/frau-arbeit-b%C3%BCro-whiteboard-4702060/
