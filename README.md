@@ -15,7 +15,7 @@ This project consists of a site which promotes the fictional web designer "Bew G
 
 ## Image server dependency
 
-The website relies on there being an image server running, based on the Node mini-project [https://github.com/datalowe/express-sharp-image-server](express-sharp-image-server). This means that you must:
+The website relies on there being an image server running, based on the Node mini-project [express-sharp-image-server](https://github.com/datalowe/express-sharp-image-server). This means that you must:
 
 1. `git clone` express-sharp-image-server
 2. Copy all the files from this repository's "image_server_extra_material" directory to the express-sharp-image-server repo's "original_images" directory.
