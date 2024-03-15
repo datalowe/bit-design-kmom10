@@ -1,6 +1,14 @@
 <div class="highlights-wrapper">
   <div *ngFor="let proj of this.pastProjects" class="past-project">
-    <img [src]="proj.pictureUrl" />
+    <img
+      [ngSrc]="proj.pictureSrc"
+      [alt]="proj.pictureAltText"
+      [width]="proj.origWidth"
+      [height]="proj.origHeight"
+      sizes="(min-width: {{ this.mediumScreenMinWidth }}) 33vw, (min-width: 0px) 100vw"
+      [loaderParams]="{ quality: 80 }"
+      [ngClass]="{ wide: proj.origWidth > proj.origHeight }"
+    />
     <h1>{{ proj.title }}</h1>
     <p [innerHTML]="proj.description"></p>
   </div>

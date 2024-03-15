@@ -4,15 +4,23 @@
 
 This repository is my final project for the course Technical Web Design and Usability ("Teknisk webbdesign och användbarhet - PA1436") at Blekinge Institute of Technology (BIT). I attended the course in the winter of 2020-2021 but did not finish the final project then, so this is a long overdue completion of my bachelor's degree from BIT.
 
-This project consists of a technically simple site which promotes the fictional web designer "Bew Gorp". The emphasis in the course and this project is on web design and accessibility.
+This project consists of a site which promotes the fictional web designer "Bew Gorp". The emphasis in the course and this project is on web design and accessibility.
 
 ## Used tools
 
 - Angular
 - Sass (with the SCSS format)
-- ? (TODO: select image compression tool)
 - nginx (for serving)
 - Docker (for automating deployment)
+
+## Image server dependency
+
+The website relies on there being an image server running, based on the Node mini-project [https://github.com/datalowe/express-sharp-image-server](express-sharp-image-server). This means that you must:
+
+1. `git clone` express-sharp-image-server
+2. Copy all the files from this repository's "image_server_extra_material" directory to the express-sharp-image-server repo's "original_images" directory.
+3. Follow the README for express-sharp-image-server, setting it up at a URL of your choice. If running locally, this would default to `localhost:3000`.
+4. In this repository, update 'src/app/shared_utils/constants.ts' with the image server URL, eg `IMAGE_BASE_URL = http://localhost:3000/image`.
 
 ## Deploy with docker
 
@@ -22,7 +30,7 @@ Create a file in root .docker.env with contents:
 APP_BASE_HREF=/root/path/
 ```
 
-where in this example, you would deploy to `https://mysite.com/root/path` (use just `/` if deploying at root).
+where, in this example, you would deploy to `https://mysite.com/root/path` (use just `/` if deploying at root).
 
 ```bash
 docker compose up -d
@@ -34,7 +42,7 @@ This starts a container which exposes the website at `https://localhost:7005`.
 
 ## Used resources
 
-- favicon cap: https://www.flaticon.com/free-icons/cap
+- flaticon cap: https://www.flaticon.com/free-icons/cap
 - Monochromatic orange color palette generated with Adobe color wheel: https://color.adobe.com/ja/create/color-wheel
 - Photos used
   - Programmer by whiteboard: https://pixabay.com/de/photos/frau-arbeit-b%C3%BCro-whiteboard-4702060/

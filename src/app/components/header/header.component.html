@@ -1,5 +1,5 @@
 <div class="hero" [class.portrait-header-page]="this.onPortraitHeaderPage()">
-  <img class="hero-img" [src]="this.getHeroImgUrl()" />
+  <img class="hero-img" (window:resize)="setHeroImg()" [src]="this.getHeroImgUrl()" [alt]="this.heroImg.altText" />
   <nav>
     <ul>
       <li><a routerLink="">Home</a></li>
@@ -9,4 +9,14 @@
   </nav>
 </div>
 
-<div class="logo"></div>
+<a routerLink="">
+  <img
+    ngSrc="logo"
+    alt="The Gorporation logo, consisting of a circle with a cap in the middle"
+    class="logo"
+    width="791"
+    height="788"
+    sizes="10vw"
+    [loaderParams]="{ quality: 80 }"
+  />
+</a>

@@ -1,6 +1,5 @@
 # Use a base image that includes Node.js
 FROM node:21.6 AS build
-ARG GRAPHQL_ENDPOINT
 
 # Set the working directory
 WORKDIR /app
@@ -16,9 +15,6 @@ COPY . .
 
 # Build the Angular application
 RUN env $(grep -v '^#' .docker.env | xargs -d '\n') npm run build_with_customhref
-
-# Build the Angular application
-RUN npm run build
 
 # Use a lightweight image for serving the application
 FROM nginx:alpine

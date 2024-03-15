@@ -1,3 +1,11 @@
 <div class="tech-carousel-wrapper">
-  <img class="tech-carousel-img" [src]="this.techImgUrl" [style.opacity]="this.techImgOpacity" />
+  <img
+    class="tech-carousel-img"
+    [src]="this.techImgUrl"
+    [style.opacity]="this.techImgOpacity"
+    [width]="this.techLogo.width"
+    [height]="this.techLogo.height"
+    alt="{{ this.techLogo.name | titlecase }} logo"
+    sizes="20vh"
+  />
 </div>
