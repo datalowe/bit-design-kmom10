@@ -37,3 +37,8 @@
     display: block;
   }
 }
+
+.hidden-link {
+  position: relative;
+  z-index: 4;
+}

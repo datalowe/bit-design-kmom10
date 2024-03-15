@@ -1,0 +1,44 @@
+<main class="hidden-docs-wrapper">
+  <h1>Dokumentation</h1>
+  <h2>Dokumentera färgpaletten och berätta hur du valde färgerna.</h2>
+  <p>
+    Jag valde att använda en monokromatisk färgskala - jag ville ha en balans mellan att fokus skulle vara på
+    innehållet, samtidigt som sidan skulle ha en distinkt färgprofil som passade ihop med loggan. Jag använde Adobe
+    Color Wheel för att generera fram orangea färger. Det passade även väl ihop med hårfärgen på personen i "Bew
+    Gorp"-fotografierna (som jag hittade på Pixabay). Exakta färgkoder finns i "src/styling/_variables.scss".
+  </p>
+  <h2>Berätta vilken känsla som kunden vill uppnå med webbplatsen.</h2>
+  <p>
+    Ett intryck av professionalism samt en känsla av nyfikenhet hos besökarenn, samtidigt som sidan ger en tydlig och
+    positiv bild av Gorp som person och utvecklare.
+  </p>
+  <h2>Beskriv hur du valt att dela upp din SASS-kod.</h2>
+  <p>
+    Angular har inbyggt stöd för Sass. Jag valde att använda SCSS-formattering. Jag har en "_variables.scss" i
+    "src/assets"-mappen som definierar färgschemat och andra app-gemensamma saker såsom typsnitt och minimibredd för
+    olika skärmstorlekar. Denna importeras i "src/styles.scss" som också anger universella enklare regler såsom
+    `box-sizing`. Utöver detta används komponentspecifika scss-filer (genererade av Angular), som enbart påverkar
+    tillhörande komponent-html. Exempelvis "src/app/components/header/header.component.scss" anger regler för
+    hero-bilden i headern.
+  </p>
+  <h2>Beskriv typografin, designprinciper och designelement som du använt.</h2>
+  <p>
+    Jag valde att använda typsnitt i stil med gammaldags skrivmaskinstext ("Special Elite Typewriter", hämtas som en
+    asset), både för loggan och för texten. Med loggan hade jag en tanke om att det på temat skrivmaskin skulle se ut
+    som en dokumentstämpel, men effekten är inte alls så tydlig så någon med bättre Photoshopfärdigheter skulle behöva
+    se över den. Eftersom loggan ska representera och stärka minnet av Gorp själv såg jag till att hennes namn är
+    inbäddat i företagsnamnet i loggan.
+  </p>
+  <p>
+    Herobilden, så som den visas på större skärmar, har i sig en trevlig symmetrisk balans i att Gorp speglas i
+    whiteboarden.
+  </p>
+  <p>
+    Navigationstexten ges emfas med en stark orange färg och en skuggning - på mobilversionen så visas texten så hela
+    tiden, på större skärmar först när man svävar över för att ge responsivitet.
+  </p>
+  <p>
+    På första sidan lade jag in en animation som växlar mellan loggor för olika typer av teknologier/programmeringsspråk
+    som Gorp behärskar, för att ge något mer dynamik åt sidan och öka nyfikenheten hos besökare.
+  </p>
+</main>
