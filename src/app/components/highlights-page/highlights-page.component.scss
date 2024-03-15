@@ -53,6 +53,15 @@
       height: auto;
     }
   }
+
+  img.wide {
+    height: auto;
+    width: 100%;
+    @media (min-width: $mediumscreen-min-width) {
+      width: 30vw;
+      height: auto;
+    }
+  }
 }
 
 .past-project:nth-child(2n) {
